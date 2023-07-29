@@ -17,6 +17,9 @@ import { Home } from 'pages/Home/Home';
 import { Layout } from 'components/Layout/Layout';
 import { RestrictedRoute } from './RestrictedRoute/RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute/PrivateRoute';
+
+// const HomePage = lazy(()=> import('../pages/Home'))
+
 export const App = () => {
   // const dispatch = useDispatch();
   // const state = useSelector(state => state);
