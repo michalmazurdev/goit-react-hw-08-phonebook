@@ -26,14 +26,18 @@ export const ContactItem = () => {
     dispatch(removeContact(contactId));
   };
 
-  return filteredContacts.map(contact => (
-    <li className={css.listItem} key={contact.id}>
-      <span>
-        {contact.name}: {contact.number}
-      </span>
-      <button className={css.button} onClick={() => handleDelete(contact.id)}>
-        Delete
-      </button>
-    </li>
-  ));
+  return contacts.length === 0 ? (
+    <p>There are no contacts yet, use add contact feature!</p>
+  ) : (
+    filteredContacts.map(contact => (
+      <li className={css.listItem} key={contact.id}>
+        <span>
+          {contact.name}: {contact.number}
+        </span>
+        <button className={css.button} onClick={() => handleDelete(contact.id)}>
+          Delete
+        </button>
+      </li>
+    ))
+  );
 };

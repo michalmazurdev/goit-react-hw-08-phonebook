@@ -1,5 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
+import { Link } from 'react-router-dom';
 import css from './RegisterForm.module.css';
 
 export const RegisterForm = () => {
@@ -21,19 +22,43 @@ export const RegisterForm = () => {
 
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-      <label className={css.label}>
+      <label className={css.label} for="registerName">
         Name
-        <input type="text" name="name"></input>
       </label>
-      <label className={css.label}>
+      <input
+        type="text"
+        name="name"
+        id="registerName"
+        className={css.input}
+      ></input>
+      <label className={css.label} for="registerEmail">
         Email
-        <input type="email" name="email"></input>
       </label>
-      <label className={css.label}>
+      <input
+        type="email"
+        name="email"
+        id="registerEmail"
+        className={css.input}
+      ></input>
+      <label className={css.label} for="registerPassword">
         Password
-        <input type="password" name="password"></input>
       </label>
-      <button type="submit">Register</button>
+      <input
+        type="password"
+        name="password"
+        id="registerPassword"
+        className={css.input}
+      ></input>
+      <button className={css.button} type="submit">
+        Register
+      </button>
+      <p className={css.registerInfo}>
+        If you already have an account, please{' '}
+        <Link className={css.link} to="/login">
+          log in
+        </Link>
+        .
+      </p>
     </form>
   );
 };

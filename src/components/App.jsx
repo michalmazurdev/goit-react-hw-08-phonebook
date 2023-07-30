@@ -1,17 +1,18 @@
 import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { useAuth } from 'hooks/useAuth';
+import { Home } from 'pages/Home/Home';
 import { Register } from 'pages/Register/Register';
 import { Login } from 'pages/Login/Login';
 import { Contacts } from 'pages/Contacts/Contacts';
-import { Home } from 'pages/Home/Home';
 import { Layout } from 'components/Layout/Layout';
 import { RestrictedRoute } from './RestrictedRoute/RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute/PrivateRoute';
-import { useDispatch } from 'react-redux';
-import { useAuth } from 'hooks/useAuth';
-import { useEffect } from 'react';
 import { refreshUser } from 'redux/auth/operations';
 import { ProgressBar } from 'react-loader-spinner';
 import css from './App.module.css';
+
 export const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();

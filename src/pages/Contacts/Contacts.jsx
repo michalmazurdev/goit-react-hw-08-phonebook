@@ -8,7 +8,7 @@ import { ContactList } from 'components/ContactList/ContactList';
 import { ProgressBar } from 'react-loader-spinner';
 import { getError, getIsLoading } from 'redux/selectors';
 import css from 'components/App.module.css';
-
+import css2 from './Contacts.module.css';
 export const Contacts = () => {
   const dispatch = useDispatch();
   // const state = useSelector(state => state);
@@ -21,13 +21,7 @@ export const Contacts = () => {
   }, [dispatch]);
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        flexDirection: 'column',
-      }}
-    >
+    <div className={css2.contactsContainer}>
       <h1 className={css.heading}>Phonebook</h1>
       <ContactForm />
       <h2 className={css.secondaryHeading}>Contacts</h2>

@@ -7,7 +7,7 @@ import { persistor, store } from 'redux/store';
 import { HashRouter } from 'react-router-dom';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 
-document.title = 'Phonebok';
+document.title = 'Phonebook';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

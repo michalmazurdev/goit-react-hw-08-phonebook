@@ -5,3 +5,17 @@
 .userInfo {
   margin: 0;
 }
+.button {
+  height: 1.5rem;
+  position: relative;
+  top: -3px;
+  padding: 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0.25rem;
+  background-color: transparent;
+}
+.button:hover {
+  background-color: lightgrey;
+}
