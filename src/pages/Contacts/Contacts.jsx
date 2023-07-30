@@ -32,7 +32,9 @@ export const Contacts = () => {
       <ContactForm />
       <h2 className={css.secondaryHeading}>Contacts</h2>
       <Filter />
-      {isLoading && !error && <ProgressBar />}
+      {isLoading && !error && (
+        <ProgressBar borderColor="#a39d9d" barColor="#a39d9d" />
+      )}
       {error && <p>We are sorry, there was an error linked to your request</p>}
       <ContactList>
         <ContactItem />

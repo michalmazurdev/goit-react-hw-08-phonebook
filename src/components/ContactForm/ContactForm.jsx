@@ -16,7 +16,7 @@ export const ContactForm = () => {
     if (contactNames.includes(nameInputValue)) {
       return alert(`${nameInputValue} is alredy in contacts`);
     }
-    dispatch(addContact({ name: nameInputValue, phone: numberInputValue }));
+    dispatch(addContact({ name: nameInputValue, number: numberInputValue }));
 
     form.reset();
   };
