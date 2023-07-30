@@ -1,10 +1,20 @@
+import { useDispatch } from 'react-redux';
+import { logIn } from 'redux/auth/operations';
+
 import css from './LoginForm.module.css';
 
 export const LoginForm = () => {
+  const dispatch = useDispatch();
+
   const handleSubmit = event => {
-    event.preventDeafult();
+    event.preventDefault();
     const form = event.currentTarget;
-    console.log(form);
+    dispatch(
+      logIn({
+        password: form.elements.password.value,
+        email: form.elements.email.value,
+      })
+    );
     form.reset();
   };
   return (
