@@ -23,7 +23,7 @@ export const Navigaton = () => {
       </StyledLink>
       {isLoggedIn && (
         <StyledLink className={css.link} to="/contacts">
-          Contacts
+          Phonebook
         </StyledLink>
       )}
     </nav>
