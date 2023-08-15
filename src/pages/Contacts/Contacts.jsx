@@ -9,6 +9,7 @@ import { ProgressBar } from 'react-loader-spinner';
 import { getContacts, getError, getIsLoading } from 'redux/selectors';
 // import css from 'components/App.module.css';
 import css from './Contacts.module.css';
+
 export const Contacts = () => {
   const dispatch = useDispatch();
   // const state = useSelector(state => state);

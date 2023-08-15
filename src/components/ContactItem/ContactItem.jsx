@@ -34,9 +34,21 @@ export const ContactItem = () => {
         <span>
           {contact.name}: {contact.number}
         </span>
-        <button className={css.button} onClick={() => handleDelete(contact.id)}>
-          Delete
-        </button>
+        <div className={css.buttonContainer}>
+          {' '}
+          <button
+            className={css.button}
+            onClick={() => handleDelete(contact.id)}
+          >
+            Delete
+          </button>
+          <button
+            className={css.button}
+            // onClick={() => handleDelete(contact.id)}
+          >
+            Edit
+          </button>
+        </div>
       </li>
     ))
   );
