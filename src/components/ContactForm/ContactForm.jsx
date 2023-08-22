@@ -42,20 +42,28 @@ export const ContactForm = () => {
     const nameInputValue = event.target.elements.name.value;
     const numberInputValue = event.target.elements.number.value;
     const contact = { name: nameInputValue, number: numberInputValue };
+    console.log(typeof editedContact.number);
+    console.log(typeof numberInputValue);
 
     const contactNames = contacts.map(contact => contact.name);
     if (contactNames.includes(nameInputValue)) {
-      return alert(`${nameInputValue} is alredy in contacts`);
+      if (nameInputValue !== editedContact.name) {
+        return alert(`${nameInputValue} is alredy in contacts`);
+      }
     }
+    // console.log('edited');
     const contactNumbers = contacts.map(contact => contact.number);
     if (contactNumbers.includes(numberInputValue)) {
-      return alert(
-        `Number ${numberInputValue} already belongs to somebody else on the list.`
-      );
+      if (numberInputValue !== editedContact.number) {
+        return alert(
+          `Number ${numberInputValue} already belongs to somebody else on the list.`
+        );
+      }
     }
     dispatch(editContact({ id: editId, contact: contact }));
     dispatch(clearEditId());
-    form.reset();
+    console.log('edited');
+    // form.reset();
   };
 
   return (
