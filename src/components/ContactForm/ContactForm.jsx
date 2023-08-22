@@ -38,7 +38,7 @@ export const ContactForm = () => {
   };
   const handleSubmitEdit = event => {
     event.preventDefault();
-    const form = event.target;
+
     const nameInputValue = event.target.elements.name.value;
     const numberInputValue = event.target.elements.number.value;
     const contact = { name: nameInputValue, number: numberInputValue };
@@ -51,7 +51,6 @@ export const ContactForm = () => {
         return alert(`${nameInputValue} is alredy in contacts`);
       }
     }
-    // console.log('edited');
     const contactNumbers = contacts.map(contact => contact.number);
     if (contactNumbers.includes(numberInputValue)) {
       if (numberInputValue !== editedContact.number) {
@@ -62,8 +61,6 @@ export const ContactForm = () => {
     }
     dispatch(editContact({ id: editId, contact: contact }));
     dispatch(clearEditId());
-    console.log('edited');
-    // form.reset();
   };
 
   return (
