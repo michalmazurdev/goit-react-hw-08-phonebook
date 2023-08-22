@@ -6,3 +6,8 @@
   list-style: none;
   padding: 0;
 }
+.secondaryHeading {
+  margin: 20px 0;
+  font-size: 2.2rem;
+  text-align: center;
+}
