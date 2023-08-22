@@ -2,11 +2,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchContacts } from 'redux/operations';
 import { ContactForm } from 'components/ContactForm/ContactForm';
-import { Filter } from 'components/Filter/Filter';
+
 import { ContactItem } from 'components/ContactItem/ContactItem';
 import { ContactList } from 'components/ContactList/ContactList';
 import { ProgressBar } from 'react-loader-spinner';
-import { getEditId, getError, getIsLoading } from 'redux/selectors';
+import { getError, getIsLoading } from 'redux/selectors';
 // import css from 'components/App.module.css';
 import css from './Contacts.module.css';
 

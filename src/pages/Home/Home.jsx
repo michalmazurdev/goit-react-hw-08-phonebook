@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import css from './Home.module.css';
-import { useSelector } from 'react-redux';
 import { useAuth } from '../../hooks/useAuth.js';
 export const Home = () => {
   const isLoggedIn = useAuth();
